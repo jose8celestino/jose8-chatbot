@@ -7,10 +7,10 @@ symbols = '!@#$%¨&*()[],.<>;:~^`\\/?°£¢¬==+-_|'
 
 # EU QUERO PEGAR DIFERENTES FATORES DESSAS LISTAS DE FORMA RANDÔMICA E RETORNAR UMA SENHA...
 
-upper, lower, nums, syms = True, True, False, False
+upper, lower, nums, syms = True, True, True, True
 
 pool = ""
-
+amount = 10
 
 if upper:
     pool += uppercase_letters
@@ -23,6 +23,6 @@ if syms:
 
 size = int(input("Insira o tamanho escolhido da senha: "))
 
-password = ''.join(random.sample(pool, k=size))
-
-print(password)
+for i in range(amount):
+    password = ''.join(random.sample(pool, k=size))
+    print(password)
